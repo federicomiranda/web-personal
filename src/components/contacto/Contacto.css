@@ -1,0 +1,163 @@
+.contacto {
+  background: #222;
+  padding: 3rem;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.light .contacto {
+  background: #bbb;
+}
+
+.contacto div {
+  width: calc(50% - 2rem);
+}
+
+.contacto .left h2 {
+  color: #ddd;
+  font-size: 5rem;
+  letter-spacing: 0.4rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.light .contacto .left h2 {
+  color: #333;
+}
+
+.contacto .left ul {
+  display: flex;
+}
+
+.contacto .left ul li {
+  margin-right: 2rem;
+}
+
+.contacto .left ul li .icon {
+  color: #ddd;
+  font-size: 3.5rem;
+}
+
+.light .contacto .left ul li .icon {
+  color: #333;
+}
+
+.contacto .left ul li:hover .icon {
+  color: rgb(9, 142, 251);
+}
+
+.contacto .right form {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.contacto .right form input {
+  width: 48%;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: none;
+  border: none;
+  resize: none;
+  color: #ddd;
+  font-size: 1.8rem;
+  border: 1px solid #ddd;
+  border-radius: 1rem;
+}
+
+.light .contacto .right form input,
+.light .contacto .right form textarea {
+  color: #333;
+  border: 1px solid #333;
+}
+
+.contacto .right form textarea {
+  width: 100%;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: none;
+  border: none;
+  resize: none;
+  color: #ddd;
+  font-size: 1.8rem;
+  border: 1px solid #ddd;
+  border-radius: 1rem;
+}
+
+.contacto .right form button {
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  letter-spacing: 0.1rem;
+  color: #ddd;
+  font-weight: 500;
+  font-size: 1.8rem;
+  background: linear-gradient(
+    180deg,
+    rgba(9, 142, 251, 1) 0%,
+    rgba(18, 97, 162, 1) 100%
+  );
+  border: none;
+  cursor: pointer;
+}
+
+.contacto .right form p {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.contacto .right form p span {
+  font-size: 2.2rem;
+}
+
+.contacto .right form p.ok {
+  color: rgb(44, 113, 153);
+}
+
+.contacto .right form p.error {
+  color: rgb(153, 44, 44);
+}
+
+.contacto .right .spinner {
+  width: 40px;
+}
+
+@media screen and (max-width: 768px) {
+  .contacto {
+    flex-direction: column;
+  }
+  .contacto div {
+    width: 100%;
+  }
+  .contacto .left {
+    margin-bottom: 4rem;
+  }
+  .contacto .left h2 {
+    color: #ddd;
+    font-size: 3rem;
+    letter-spacing: 0.4rem;
+    font-weight: 700;
+    text-align: center;
+  }
+  .contacto .left ul {
+    justify-content: center;
+  }
+  .contacto .left ul li .icon {
+    font-size: 2.5rem;
+  }
+  .contacto .right form button {
+    width: 100%;
+  }
+  .contacto .right .spinner {
+    width: 25px;
+    display: block;
+    margin: 1rem auto 0;
+  }
+  .contacto .right form p {
+    text-align: center;
+    margin-top: 1rem;
+    width: 100%;
+  }
+}

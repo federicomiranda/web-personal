@@ -1,0 +1,76 @@
+.sobremi {
+  margin-bottom: 4rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.sobremi .left {
+  background: #222;
+  width: calc(100% - 300px);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 3rem;
+  margin-right: 4rem;
+}
+
+.light .sobremi .left {
+  background: #bbb;
+}
+
+.sobremi .left h2 {
+  color: #ddd;
+  font-size: 3rem;
+  letter-spacing: 0.4rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.light .sobremi .left h2 {
+  color: #333;
+}
+
+.sobremi .left p {
+  font-size: 1.8rem;
+  line-height: 1.6;
+  color: #ddd;
+  margin-bottom: 2rem;
+  letter-spacing: 0.1rem;
+}
+
+.light .sobremi .left p {
+  color: #333;
+}
+
+.sobremi .left a {
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  letter-spacing: 0.1rem;
+  color: #ddd;
+  font-weight: 500;
+  font-size: 1.8rem;
+  background: linear-gradient(
+    180deg,
+    rgba(9, 142, 251, 1) 0%,
+    rgba(18, 97, 162, 1) 100%
+  );
+}
+
+.sobremi .right {
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 768px) {
+  .sobremi {
+    flex-direction: column;
+  }
+  .sobremi .left {
+    width: 100%;
+  }
+  .sobremi .right {
+    display: none;
+  }
+}

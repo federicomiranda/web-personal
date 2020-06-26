@@ -1,0 +1,102 @@
+.experiencia {
+  margin-bottom: 4rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.experiencia .title {
+  background: #222;
+  width: 100%;
+  padding: 3rem 0;
+  border-radius: 1rem;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.light .experiencia .title {
+  background: #bbb;
+}
+
+.experiencia .title h2 {
+  color: #ddd;
+  font-size: 3rem;
+  letter-spacing: 0.4rem;
+  font-weight: 700;
+}
+
+.light .experiencia .title h2 {
+  color: #333;
+}
+
+.experiencia article {
+  width: calc(50% - 2rem);
+  background: #222;
+  border-radius: 1rem;
+  padding: 3rem;
+}
+
+.light .experiencia article {
+  background: #bbb;
+}
+
+.experiencia article h3 {
+  color: #ddd;
+  font-size: 2.5rem;
+  letter-spacing: 0.3rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+}
+
+.light .experiencia article h3 {
+  color: #333;
+}
+
+.experiencia article ul li {
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.experiencia article ul li::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  display: block;
+  margin-right: 1rem;
+  background: linear-gradient(
+    180deg,
+    rgba(9, 142, 251, 1) 0%,
+    rgba(18, 97, 162, 1) 100%
+  );
+  border-radius: 50%;
+}
+
+.experiencia article ul li h4 {
+  font-size: 2rem;
+  color: #ddd;
+  letter-spacing: 0.15rem;
+  margin-right: 1rem;
+}
+
+.experiencia article ul li p {
+  color: #ddd;
+  font-size: 1.8rem;
+}
+
+.light .experiencia article ul li h4,
+.light .experiencia article ul li p {
+  color: #333;
+}
+
+@media screen and (max-width: 768px) {
+  .experiencia {
+    flex-direction: column;
+  }
+  .experiencia article {
+    width: 100%;
+  }
+  .experiencia article.left {
+    margin-bottom: 4rem;
+  }
+}

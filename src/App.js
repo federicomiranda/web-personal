@@ -1,26 +1,46 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import Header from "./components/header/Header";
+import Sobremi from "./components/sobremi/Sobremi";
+import Experiencia from "./components/experiencia/Experiencia";
+import Portfolio from "./components/portfolio/Portfolio";
+import Contacto from "./components/contacto/Contacto";
 
-function App() {
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLightbulb } from "@fortawesome/free-solid-svg-icons";
+
+const App = () => {
+  const [mode, setMode] = useState(true);
+
+  const handleMode = () => {
+    setMode(!mode);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <div className={mode ? "dark" : "light"}>
+      <div className="container">
+        <button
+          className={`changeMode ${!mode ? "oscuro" : "claro"}`}
+          onClick={handleMode}
         >
-          Learn React
-        </a>
-      </header>
+          <FontAwesomeIcon className="icon" icon={faLightbulb} />
+          <p>{!mode ? "Oscuro" : "Claro"}</p>
+        </button>
+        <Header />
+
+        <section className="presentacion">
+          <div className="container">
+            <h1>Federico Miranda</h1>
+            <p>Web Developer</p>
+          </div>
+        </section>
+
+        <Sobremi />
+        <Experiencia />
+        <Portfolio />
+        <Contacto />
+      </div>
     </div>
   );
-}
+};
 
 export default App;
